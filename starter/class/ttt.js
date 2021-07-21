@@ -5,7 +5,6 @@ class TTT {
 
   constructor() {
 
-    this.playerTurn = "O";
 
     this.grid = [[' ',' ',' '],
                  [' ',' ',' '],
@@ -18,7 +17,12 @@ class TTT {
     Screen.setGridlines(true);
 
     // Replace this with real commands
-    Screen.addCommand('t', 'test command (remove)', TTT.testCommand);
+    //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);
+    Screen.addCommand('w', "Move the cursor up", this.cursor.up.bind(this.cursor))
+    Screen.addCommand('s', "Move the cursor down", this.cursor.down.bind(this.cursor))
+    Screen.addCommand('d', "Move the cursor right", this.cursor.right.bind(this.cursor))
+    Screen.addCommand('a', "Move the cursor left", this.cursor.left.bind(this.cursor))
+    Screen.addCommand('space', "Play move", this.cursor.turn.bind(this.cursor))
 
     Screen.render();
   }

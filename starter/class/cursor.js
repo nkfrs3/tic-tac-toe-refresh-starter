@@ -11,6 +11,7 @@ class Cursor {
 
     this.gridColor = 'black';
     this.cursorColor = 'yellow';
+    this.playerTurn = "O";
 
   }
 
@@ -23,19 +24,55 @@ class Cursor {
   }
 
   up() {
-    // Move cursor up
+    this.resetBackgroundColor()
+    if (this.row === 0) {
+      this.row = 0;
+    } else {
+      this.row -= 1;
+    }
+    this.setBackgroundColor();
+    Screen.render();
   }
 
   down() {
-    // Move cursor down
+    this.resetBackgroundColor()
+    if (this.row >= 2) {
+      this.row = 2;
+    } else {
+      this.row ++;
+    }
+    this.setBackgroundColor();
+    Screen.render();
   }
 
   left() {
-    // Move cursor left
+    this.resetBackgroundColor()
+    if (this.col === 0) {
+      this.col = 0
+    } else {
+      this.col --;
+    }
+    this.setBackgroundColor();
+    Screen.render();
   }
 
   right() {
-    // Move cursor right
+    this.resetBackgroundColor()
+    if (this.col >= 2) {
+      this.col = 2;
+    } else {
+      this.col ++;
+    }
+    this.setBackgroundColor();
+    Screen.render();
+  }
+
+  turn() {
+    Screen.setGrid(this.row, this.col, this.playerTurn);
+
+    if (this.playerTurn === "O") {
+      this.playerTurn = "X";
+    }
   }
 
 }

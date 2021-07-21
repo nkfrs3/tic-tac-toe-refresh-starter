@@ -1,0 +1,94 @@
+{
+    "sourceFile": "class/ttt.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1626889999176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1626890109333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n+    Screen.addCommand\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890116487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand\n+    Screen.addCommand()\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890124115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand()\n+    Screen.addCommand('W')\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890138253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand('W')\n+    Screen.addCommand('W', \"Move the cursor up\")\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890167369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand('W', \"Move the cursor up\")\n+    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up)\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890196271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up)\n+    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up.)\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890203016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up.)\n+    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up.bind())\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890461763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     Screen.setGridlines(true);\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n-    Screen.addCommand('W', \"Move the cursor up\", this.cursor.up.bind())\n+    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890467475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,11 @@\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890473218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('s', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('d', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890480082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('s', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('d', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('s', \"Move the cursor down\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('a', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890485523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,10 @@\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('a', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('a', \"Move the cursor left\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890504176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('a', \"Move the cursor left\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('space', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626890520348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('a', \"Move the cursor left\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('space', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('space', \"Play move\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626891106695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('s', \"Move the cursor down\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('s', \"Move the cursor down\", this.cursor.down.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('a', \"Move the cursor left\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('space', \"Play move\", this.cursor.up.bind(this.cursor))\n \n"
+                },
+                {
+                    "date": 1626891113416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n     // Replace this with real commands\n     //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.down.bind(this.cursor))\n-    Screen.addCommand('d', \"Move the cursor right\", this.cursor.up.bind(this.cursor))\n-    Screen.addCommand('a', \"Move the cursor left\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('d', \"Move the cursor right\", this.cursor.right.bind(this.cursor))\n+    Screen.addCommand('a', \"Move the cursor left\", this.cursor.left.bind(this.cursor))\n     Screen.addCommand('space', \"Play move\", this.cursor.up.bind(this.cursor))\n \n     Screen.render();\n   }\n"
+                },
+                {
+                    "date": 1626891119082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.down.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.right.bind(this.cursor))\n     Screen.addCommand('a', \"Move the cursor left\", this.cursor.left.bind(this.cursor))\n-    Screen.addCommand('space', \"Play move\", this.cursor.up.bind(this.cursor))\n+    Screen.addCommand('space', \"Play move\", this.cursor.spac.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626891124652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.addCommand('w', \"Move the cursor up\", this.cursor.up.bind(this.cursor))\n     Screen.addCommand('s', \"Move the cursor down\", this.cursor.down.bind(this.cursor))\n     Screen.addCommand('d', \"Move the cursor right\", this.cursor.right.bind(this.cursor))\n     Screen.addCommand('a', \"Move the cursor left\", this.cursor.left.bind(this.cursor))\n-    Screen.addCommand('space', \"Play move\", this.cursor.spac.bind(this.cursor))\n+    Screen.addCommand('space', \"Play move\", this.cursor.turn.bind(this.cursor))\n \n     Screen.render();\n   }\n \n"
+                },
+                {
+                    "date": 1626891456372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n class TTT {\n \n   constructor() {\n \n-    this.playerTurn = \"O\";\n \n     this.grid = [[' ',' ',' '],\n                  [' ',' ',' '],\n                  [' ',' ',' ']]\n"
+                }
+            ],
+            "date": 1626889999176,
+            "name": "Commit-0",
+            "content": "const Screen = require(\"./screen\");\nconst Cursor = require(\"./cursor\");\n\nclass TTT {\n\n  constructor() {\n\n    this.playerTurn = \"O\";\n\n    this.grid = [[' ',' ',' '],\n                 [' ',' ',' '],\n                 [' ',' ',' ']]\n\n    this.cursor = new Cursor(3, 3);\n\n    // Initialize a 3x3 tic-tac-toe grid\n    Screen.initialize(3, 3);\n    Screen.setGridlines(true);\n\n    // Replace this with real commands\n    //Screen.addCommand('t', 'test command (remove)', TTT.testCommand);\n\n    Screen.render();\n  }\n\n  // Remove this\n  static testCommand() {\n    console.log(\"TEST COMMAND\");\n  }\n\n  static checkWin(grid) {\n\n    // Return 'X' if player X wins\n    // Return 'O' if player O wins\n    // Return 'T' if the game is a tie\n    // Return false if the game has not ended\n\n  }\n\n  static endGame(winner) {\n    if (winner === 'O' || winner === 'X') {\n      Screen.setMessage(`Player ${winner} wins!`);\n    } else if (winner === 'T') {\n      Screen.setMessage(`Tie game!`);\n    } else {\n      Screen.setMessage(`Game Over`);\n    }\n    Screen.render();\n    Screen.quit();\n  }\n\n}\n\nmodule.exports = TTT;\n"
+        }
+    ]
+}

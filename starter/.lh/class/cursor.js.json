@@ -1,0 +1,126 @@
+{
+    "sourceFile": "class/cursor.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1626889207659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1626889367722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   constructor(numRows, numCols) {\n     this.numRows = numRows;\n     this.numCols = numCols;\n \n-    this.row = 0;\n+    this.row = 0; //\n     this.col = 0;\n \n     this.gridColor = 'black';\n     this.cursorColor = 'yellow';\n@@ -22,8 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n+\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889379119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   constructor(numRows, numCols) {\n     this.numRows = numRows;\n     this.numCols = numCols;\n \n-    this.row = 0; //\n-    this.col = 0;\n+    this.row = 0;\n+    this.col = 0; \n \n     this.gridColor = 'black';\n     this.cursorColor = 'yellow';\n \n"
+                },
+                {
+                    "date": 1626889421453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     this.numRows = numRows;\n     this.numCols = numCols;\n \n     this.row = 0;\n-    this.col = 0; \n+    this.col = 0;\n \n     this.gridColor = 'black';\n     this.cursorColor = 'yellow';\n \n@@ -22,9 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-\n+    this.r\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889428493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.r\n+    this.row-- \n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889440600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row-- \n+    this.row--l\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889474274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,12 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row--l\n+    this.row--;\n+    if (this.row === 0) {\n+      \n+    }\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889480093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n   up() {\n     this.row--;\n     if (this.row === 0) {\n-      \n+      this.row \n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889528992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,12 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n+    \n     this.row--;\n     if (this.row === 0) {\n-      this.row \n+      this.row = 2;\n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889534787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,12 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    \n+\n     this.row--;\n     if (this.row === 0) {\n-      this.row = 2;\n+      this.row = 0;\n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889554739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-\n     this.row--;\n     if (this.row === 0) {\n       this.row = 0;\n     }\n"
+                },
+                {
+                    "date": 1626889564487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     this.row--;\n     if (this.row === 0) {\n       this.row = 0;\n     }\n+    \n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889585839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,10 @@\n \n   up() {\n     this.row--;\n     if (this.row === 0) {\n-      this.row = 0;\n+      this.row = 2;\n     }\n-    \n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889629137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,12 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row--;\n     if (this.row === 0) {\n       this.row = 2;\n     }\n+    this.row--;\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889635203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,12 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n+    this.row--;\n     if (this.row === 0) {\n       this.row = 2;\n     }\n-    this.row--;\n   }\n \n   down() {\n     // Move cursor down\n"
+                },
+                {
+                    "date": 1626889641083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,9 @@\n     }\n   }\n \n   down() {\n-    // Move cursor down\n-  }\n+    \n \n   left() {\n     // Move cursor left\n   }\n"
+                },
+                {
+                    "date": 1626889649509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,19 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row--;\n+    this.row++;\n     if (this.row === 0) {\n       this.row = 2;\n     }\n   }\n \n   down() {\n-    \n \n+\n+  }\n+\n   left() {\n     // Move cursor left\n   }\n \n"
+                },
+                {
+                    "date": 1626889660518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row++;\n+    this.row--;\n     if (this.row === 0) {\n       this.row = 2;\n     }\n   }\n"
+                },
+                {
+                    "date": 1626889700591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n   up() {\n     this.row--;\n     if (this.row === 0) {\n-      this.row = 2;\n+      this.row = 0;\n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889743581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,13 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    this.row--;\n     if (this.row === 0) {\n       this.row = 0;\n+    } else {\n+    this.row--;\n+\n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889796083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n   up() {\n     if (this.row === 0) {\n       this.row = 0;\n     } else {\n-    this.row--;\n-\n+      this.row -= 1;\n     }\n   }\n \n   down() {\n"
+                },
+                {
+                    "date": 1626889805599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n+    \n     if (this.row === 0) {\n       this.row = 0;\n     } else {\n       this.row -= 1;\n"
+                },
+                {
+                    "date": 1626889814593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n     Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n   }\n \n   up() {\n-    \n     if (this.row === 0) {\n       this.row = 0;\n     } else {\n       this.row -= 1;\n"
+                },
+                {
+                    "date": 1626889846395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n     }\n   }\n \n   down() {\n+    \n \n-\n   }\n \n   left() {\n     // Move cursor left\n"
+                },
+                {
+                    "date": 1626889857049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,9 @@\n     }\n   }\n \n   down() {\n-    \n-\n+    if (this.row === 2) \n   }\n \n   left() {\n     // Move cursor left\n"
+                },
+                {
+                    "date": 1626889862620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,11 @@\n     }\n   }\n \n   down() {\n-    if (this.row === 2) \n+    if (this.row === 2) {\n+      this.row = 2'\n+    }\n   }\n \n   left() {\n     // Move cursor left\n"
+                },
+                {
+                    "date": 1626889869061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   down() {\n     if (this.row === 2) {\n       this.row = 2;\n     } else {\n-      this.row\n+      this.row \n     }\n   }\n \n   left() {\n"
+                },
+                {
+                    "date": 1626889883117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n     }\n   }\n \n   left() {\n+    \n   }\n \n   right() {\n     // Move cursor right\n"
+                }
+            ],
+            "date": 1626889207659,
+            "name": "Commit-0",
+            "content": "const Screen = require(\"./screen\");\n\nclass Cursor {\n\n  constructor(numRows, numCols) {\n    this.numRows = numRows;\n    this.numCols = numCols;\n\n    this.row = 0;\n    this.col = 0;\n\n    this.gridColor = 'black';\n    this.cursorColor = 'yellow';\n\n  }\n\n  resetBackgroundColor() {\n    Screen.setBackgroundColor(this.row, this.col, this.gridColor);\n  }\n\n  setBackgroundColor() {\n    Screen.setBackgroundColor(this.row, this.col, this.cursorColor);\n  }\n\n  up() {\n  }\n\n  down() {\n    // Move cursor down\n  }\n\n  left() {\n    // Move cursor left\n  }\n\n  right() {\n    // Move cursor right\n  }\n\n}\n\n\nmodule.exports = Cursor;\n"
+        }
+    ]
+}
