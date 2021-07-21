@@ -1,4 +1,5 @@
 const Screen = require("./screen");
+const checkWin  = require("./ttt").checkWin;
 
 class Cursor {
 
@@ -68,10 +69,17 @@ class Cursor {
   }
 
   turn() {
-    Screen.setGrid(this.row, this.col, this.playerTurn);
+    if (Screen.grid[this.row][this.col] === " ") {
+      Screen.setGrid(this.row, this.col, this.playerTurn);
+    }
+
+    console.log(checkWin)
+    checkWin(this.grid)
 
     if (this.playerTurn === "O") {
       this.playerTurn = "X";
+    } else {
+      this.playerTurn = "O";
     }
   }
 

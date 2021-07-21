@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1626889999176,
@@ -84,6 +84,22 @@
                 {
                     "date": 1626891456372,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n class TTT {\n \n   constructor() {\n \n-    this.playerTurn = \"O\";\n \n     this.grid = [[' ',' ',' '],\n                  [' ',' ',' '],\n                  [' ',' ',' ']]\n"
+                },
+                {
+                    "date": 1626898956331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     console.log(\"TEST COMMAND\");\n   }\n \n   static checkWin(grid) {\n-\n+    \n     // Return 'X' if player X wins\n     // Return 'O' if player O wins\n     // Return 'T' if the game is a tie\n     // Return false if the game has not ended\n"
+                },
+                {
+                    "date": 1626898987527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,11 @@\n     console.log(\"TEST COMMAND\");\n   }\n \n   static checkWin(grid) {\n-    \n+\n+    if )\n+\n     // Return 'X' if player X wins\n     // Return 'O' if player O wins\n     // Return 'T' if the game is a tie\n     // Return false if the game has not ended\n"
+                },
+                {
+                    "date": 1626899016791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   }\n \n   static checkWin(grid) {\n \n-    for (let i = 0; i < g)\n+    for (let i = 0; i < gr)\n \n     // Return 'X' if player X wins\n     // Return 'O' if player O wins\n     // Return 'T' if the game is a tie\n"
+                },
+                {
+                    "date": 1626899047350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \n   static checkWin(grid) {\n \n     for (let i = 0; i < 2; i++) {\n-      if (grid[])\n+      if (grid[i])\n     }\n \n     // Return 'X' if player X wins\n     // Return 'O' if player O wins\n"
                 }
             ],
             "date": 1626889999176,

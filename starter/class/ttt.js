@@ -34,6 +34,48 @@ class TTT {
 
   static checkWin(grid) {
 
+    //horizontals and verticals
+    for (let i = 0; i < 3; i++) {
+      if (grid[i][0] !== " " &&
+        grid[i][0] === grid[i][1] &&
+        grid[i][0] === grid[i][2]) {
+          return grid[i][0];
+      } else if (grid[0][i] !== " " &&
+        grid[0][i] === grid[1][i] &&
+        grid[0][i] === grid[2][i]) {
+          return grid[0][i];
+        }
+    }
+
+    //diagonals
+    if (grid[1][1] !== " " &&
+        ((grid[0][0] === grid[1][1] &&
+        grid[0][0] === grid[2][2]) ||
+        (grid[2][0] === grid[0][2] &&
+        grid[1][1] === grid[0][2]))) {
+          return grid[1][1];
+    }
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (grid[i][j] === " ") {
+          return false;
+        }
+      }
+    }
+
+    return "T"
+
+    // if (grid.some(index => {
+    //   return grid.some(ele => {
+    //     return ele === " ";
+    //   })
+    // }));
+
+
+
+
+
     // Return 'X' if player X wins
     // Return 'O' if player O wins
     // Return 'T' if the game is a tie
