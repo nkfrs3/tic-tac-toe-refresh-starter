@@ -11,6 +11,7 @@ class TTT {
                  [' ',' ',' ']]
 
     this.cursor = new Cursor(3, 3);
+    this.playerTurn = "O";
 
     // Initialize a 3x3 tic-tac-toe grid
     Screen.initialize(3, 3);
@@ -22,9 +23,31 @@ class TTT {
     Screen.addCommand('s', "Move the cursor down", this.cursor.down.bind(this.cursor))
     Screen.addCommand('d', "Move the cursor right", this.cursor.right.bind(this.cursor))
     Screen.addCommand('a', "Move the cursor left", this.cursor.left.bind(this.cursor))
-    Screen.addCommand('space', "Play move", this.cursor.turn.bind(this.cursor))
+    Screen.addCommand('space', "Play move", this.turn.bind(this))
 
     Screen.render();
+  }
+
+  turn() {
+    if (Screen.grid[this.cursor.row][this.cursor.col] === " ") {
+      Screen.setGrid(this.cursor.row, this.cursor.col, this.playerTurn);
+    }
+
+    let winCheck = TTT.checkWin(this.grid)
+    console.log(winCheck)
+
+    if ((winCheck === "X") || (winCheck === "O") || (winCheck === "T")) {
+      console.log("win")
+      TTT.endGame(winCheck);
+    }
+
+
+
+    if (this.playerTurn === "O") {
+      this.playerTurn = "X";
+    } else {
+      this.playerTurn = "O";
+    }
   }
 
   // Remove this
@@ -33,18 +56,20 @@ class TTT {
   }
 
   static checkWin(grid) {
-
     //horizontals and verticals
     for (let i = 0; i < 3; i++) {
-      if (grid[i][0] !== " " &&
-        grid[i][0] === grid[i][1] &&
-        grid[i][0] === grid[i][2]) {
+      let check;
+      if ((grid[i][0] !== " " ) &&
+        (grid[i][0] === grid[i][1]) &&
+        (grid[i][0] === grid[i][2])) {
           return grid[i][0];
-      } else if (grid[0][i] !== " " &&
-        grid[0][i] === grid[1][i] &&
-        grid[0][i] === grid[2][i]) {
-          return grid[0][i];
-        }
+      }
+
+      if (grid[0][i] !== " " &&
+      grid[0][i] === grid[1][i] &&
+      grid[0][i] === grid[2][i]) {
+        return grid[0][i];
+      }
     }
 
     //diagonals

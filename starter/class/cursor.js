@@ -12,7 +12,6 @@ class Cursor {
 
     this.gridColor = 'black';
     this.cursorColor = 'yellow';
-    this.playerTurn = "O";
 
   }
 
@@ -68,20 +67,7 @@ class Cursor {
     Screen.render();
   }
 
-  turn() {
-    if (Screen.grid[this.row][this.col] === " ") {
-      Screen.setGrid(this.row, this.col, this.playerTurn);
-    }
 
-    console.log(checkWin)
-    checkWin(this.grid)
-
-    if (this.playerTurn === "O") {
-      this.playerTurn = "X";
-    } else {
-      this.playerTurn = "O";
-    }
-  }
 
 }
 
